@@ -3,13 +3,7 @@
 # We want to download some websites from the Internet archive. They
 # are:
 
-for URL in "shanghaiist.com" \
-	       "dcist.com" \
-	       "laist.com" \
-	       "chicagoist.com" \
-	       "sfist.com" \
-	       "dnainfo.com" \
-	       "gothamist.com";
+for URL in "gothamist.com" "dnainfo.com" "dcist.com" "laist.com" "chicagoist.com" "sfist.com" "shanghaiist.com";
 
 	   # We will use this program, it seems fine:
 	   # https://github.com/hartator/wayback-machine-downloader
