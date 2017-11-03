@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import os
 import csv
 
-MIRROR_DIR='/Users/ford/Dropbox/mirror'
+MIRROR_DIR='/Users/ford/Dropbox/mirror/gothamist.com'
 
 csv_file = open('test.csv', 'w')
 csv_writer = csv.writer(csv_file)
