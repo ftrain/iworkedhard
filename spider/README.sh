@@ -18,6 +18,12 @@ for URL in "shanghaiist.com" \
 	   # about 5 concurrent connections but after that you're
 	   # pushing it.
 
+	   # We also really only want HTMLish files. The easiest way
+	   # to find those is by exclusion so we just elimate any
+	   # images, CSS, JS, etc. The other thing we want to avoid
+	   # are articles that have querystrings at the end so we also
+	   # avoid "?"
+
 do wayback_machine_downloader ${URL} \
 			      --directory /Users/ford/Dropbox/mirror/${URL} \
 			      --concurrency 5 \
