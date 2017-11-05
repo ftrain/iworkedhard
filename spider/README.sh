@@ -3,13 +3,15 @@
 # We want to download some websites from the Internet archive. They
 # are:
 
-for URL in "gothamist.com" "dnainfo.com" "dcist.com" "laist.com" "chicagoist.com" "sfist.com" "shanghaiist.com";
+# Already got Gothamist
+
+for URL in "dnainfo.com" "dcist.com" "laist.com" "chicagoist.com" "sfist.com" "shanghaiist.com";
 
 	   # We will use this program, it seems fine:
 	   # https://github.com/hartator/wayback-machine-downloader
 
 	   # Some probing shows that the Internet Archive is cool with
-	   # about 5 concurrent connections but after that you're
+	   # about 3 concurrent connections but after that you're
 	   # pushing it.
 
 	   # We also really only want HTMLish files. The easiest way
@@ -20,7 +22,7 @@ for URL in "gothamist.com" "dnainfo.com" "dcist.com" "laist.com" "chicagoist.com
 
 do wayback_machine_downloader ${URL} \
 			      --directory /Users/ford/Dropbox/mirror/${URL} \
-			      --concurrency 5 \
+			      --concurrency 3 \
 			      --exclude "/\?|\.(gif|jpg|jpeg|png|js|mp4|mov|flv|avi|css|pdf)$/i";
 done;
 
